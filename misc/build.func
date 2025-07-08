@@ -1241,9 +1241,9 @@ EOF'
     else
       msg_warn "Skipping timezone setup – zone '$tz' not found in container"
     fi
-    pct exec "$CTID" -- bash -c "curl https://chsrc.run/posix | bash >/dev/null"
-    pct exec "$CTID" -- bash -c "chsrc set debian >/dev/null"
-    pct exec "$CTID" -- bash -c "apt-get update >/dev/null && apt-get install -y sudo curl mc gnupg2 >/dev/null"
+    pct exec "$CTID" -- bash -c "curl https://chsrc.run/posix | bash "
+    pct exec "$CTID" -- bash -c "chsrc set debian "
+    pct exec "$CTID" -- bash -c "apt-get update  && apt-get install -y sudo curl mc gnupg2"
   fi
   msg_ok "Customized LXC Container"
 
